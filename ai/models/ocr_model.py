@@ -1,3 +1,11 @@
+# def ocr_tag(image_url):
+
+#     result = {
+#         "brand": "오뚜기",
+#         "product": "컵누들"
+#     }
+
+#     return result
 # from core.util.image_util import load_image
 
 import torch
@@ -8,12 +16,31 @@ import numpy as np
 import shutil
 from easyocr import Reader
 from rapidfuzz import fuzz
+import urllib.request
+
+# 이미지 URL
+# url = 'https://hkhan2023.s3.ap-northeast-2.amazonaws.com/tag_24.jpg'
+
+# urllib를 사용하여 이미지 다운로드
+# response = urllib.request.urlopen(url)
+# image_data = response.read()
+
+# # 이미지를 파일로 저장
+# with open('downloaded_tag_24.jpg', 'wb') as f:
+#     f.write(image_data)
 
 def ocr_tag(img_url):
-    new_img = cv2.imread(img_url)
+    response = urllib.request.urlopen(img_url)
+    image_data = response.read()
+
+    local_img_url = 'downloaded_tag_24.jpg'
+    with open(local_img_url, 'wb') as f:
+        f.write(image_data)
+
+    new_img = cv2.imread(local_img_url)
 
     # Run yolov5
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='..\\weights\\ocr_weights_2.pt', force_reload=True)
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='ai\\weights\\ocr_weights_2.pt', force_reload=True)
     results = model(new_img)
 
     # save cropped area
