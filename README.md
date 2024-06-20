@@ -10,9 +10,9 @@
 - ```FastAPI 0.111.0```
 
 #### AI (OCR)
+- ```easyocr==1.7.1``` 기반 finetuning 모델을 사용했습니다.
 - ```torch==2.3.0```
 - ```torchvision>=0.9.0```
-- ```easyocr==1.7.1```
 - ```rapidfuzz```
 - ```ultralytics==8.2.36```
   
