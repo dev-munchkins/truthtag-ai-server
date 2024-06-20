@@ -10,9 +10,18 @@
 - ```FastAPI 0.111.0```
 
 #### AI (OCR)
-
+- ```torch==2.3.0```
+- ```torchvision>=0.9.0```
+- ```easyocr==1.7.1```
+- ```rapidfuzz```
+- ```ultralytics==8.2.36```
+  
 #### AI (Chatbot)
-
+- ```https://github.com/SKTBrain/KoBERT.git``` 기반 finetuning 모델을 사용했습니다.
+- ```gluonnlp==0.10.0```
+- ```transformers==4.8.1```
+- ```mxnet==1.5.0```
+- ```urllib3==1.25.4```
 
 ## How to...
 > ⚠️ 해당 프로젝트는 GPU가 있는 환경에서만 실행이 가능합니다!
