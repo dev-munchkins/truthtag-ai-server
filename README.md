@@ -49,7 +49,6 @@ python3 app.py
 ```
 
 ### Test
-- Swagger 문서로 접속하여 테스트가 가능하다. (브라우저를 통해 다음 주소에 접속하면 된다)
-```
-http://localhost:8000/docs
-```
+- 환경에 따라 다음 링크를 클릭하여 Swagger 문서로 접속하면 테스트가 가능하다.
+  - [로컬 환경](http://localhost:8000/docs)
+  - [배포 환경](https://ai.truthtag.site/docs)
