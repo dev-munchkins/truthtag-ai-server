@@ -49,6 +49,7 @@ source venv/bin/activate
 ```
 
 4. 터미널에 다음 명령어를 실행하여 가상 환경 내부에 필수 라이브러리를 설치한다.
+`주의` Windows 환경이라면, requirements.txt 내의 uvloop을 주석처리 한 후 실행해주세요.
 ```bash
 pip install -r requirements.txt
 ```
